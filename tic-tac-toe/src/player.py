@@ -218,16 +218,16 @@ class HumanPlayer:
         """
         Human Player
         Input a number to put a chessman
-        | q | w | e |
-        | a | s | d |
-        | z | x | c |
+        | 7 | 8 | 9 |
+        | 4 | 5 | 6 |
+        | 1 | 2 | 3 |
         """
         # endregion Summary
 
         # region Body
 
         self.symbol = None
-        self.keys = ['q', 'w', 'e', 'a', 's', 'd', 'z', 'x', 'c']
+        self.keys = ['7', '8', '9', '4', '5', '6', '1', '2', '3']
         self.state = None
 
         # endregion Body
