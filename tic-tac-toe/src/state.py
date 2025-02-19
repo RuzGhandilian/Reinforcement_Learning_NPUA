@@ -157,7 +157,7 @@ class State:
                 if self.data[i, j] == 1:
                     symbol = 'X'
                 elif self.data[i, j] == -1:
-                    symbol = 'O'
+                    symbol =  'O'
                 else:
                     symbol = ' '
                 out += symbol + ' | '
