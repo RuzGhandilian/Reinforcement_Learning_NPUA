@@ -155,9 +155,9 @@ class State:
             out = '| '
             for j in range(self.board_columns):
                 if self.data[i, j] == 1:
-                    symbol = 'O'
-                elif self.data[i, j] == -1:
                     symbol = 'X'
+                elif self.data[i, j] == -1:
+                    symbol = 'O'
                 else:
                     symbol = ' '
                 out += symbol + ' | '
