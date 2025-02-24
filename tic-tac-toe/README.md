@@ -50,8 +50,8 @@ This project is a **Reinforcement Learning (RL)** implementation of the classic 
    - `state.py`
    - `player.py`
    - `judge.py`
-   - `main.py`
+   - `tic_tac_toe.py`
 
 2. Run the main script:
    ```bash
-   python main.py
+   python tic_tac_toe.py
