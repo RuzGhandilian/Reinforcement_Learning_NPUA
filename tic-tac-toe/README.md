@@ -35,12 +35,7 @@ This project is a **Reinforcement Learning (RL)** implementation of the classic 
 3. **Play Mode**:
    - A human can play against the trained RL agent to test its performance.
 
----
 
-## **Requirements**
-
-- Python 3.x
-- NumPy (`pip install numpy`)
 
 ---
 
