@@ -20,6 +20,20 @@ This project simulates the behavior of a multi-armed bandit problem using epsilo
 You can see the requirements in `requirements.txt`
 
 ---
+
+## Results 
+1. **Exploration vs. Exploitation**:
+   - Higher epsilon (`ε = 0.10`) leads to more exploration, which helps discover better actions early but reduces long-term performance.
+   - Lower epsilon (`ε = 0.01`) leads to better long-term results. The percentage of optimal actions increases steadily and converges to a higher value, indicating a good balance between exploration and exploitation.
+   - Greedy strategy (`ε = 0.00`) performs poorly because it lacks exploration.
+
+2. **Optimal Strategy**:
+   - A small amount of exploration (`ε = 0.01`) is optimal for maximizing both average reward and the percentage of optimal actions over time.
+  
+     
+<img src="https://github.com/user-attachments/assets/2928422d-d83c-4ba8-bf7f-7c55d11f953b" width="400" />
+
+---
 ## How to Run
 1. Install dependencies:
    ```bash
