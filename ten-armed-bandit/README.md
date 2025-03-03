@@ -41,6 +41,8 @@ The simulation calculates the percentage of optimal actions over time for each b
 - **Bandit 1 (`ε = 0, 𝑄₁(𝑎) = 5`)**: Represents a greedy strategy with optimistic initial values.
 - **Bandit 2 (`ε = 0.1, 𝑄₁(𝑎) = 0`)**: Represents an epsilon-greedy strategy with realistic initial values.
 
+<img src="https://github.com/user-attachments/assets/07d98114-9162-4abe-b0ae-7e9a4ad13b2f" width="400" />
+
 ---
 ## How to Run
 1. Install dependencies:
