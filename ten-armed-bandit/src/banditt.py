@@ -152,7 +152,6 @@ class Bandit:
 
         # endregion Body
 
-
     def step(self, action):
         # region Summary
         """
