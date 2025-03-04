@@ -21,8 +21,8 @@ You can see the requirements in `requirements.txt`
 
 ---
 
-## Results 
-### Greedy Action Selection VS ε-greedy Action Selection
+# Results 
+## Greedy Action Selection VS ε-greedy Action Selection
 
 1. **Exploration vs. Exploitation**:
    - Higher epsilon (`ε = 0.10`) leads to more exploration, which helps discover better actions early but reduces long-term performance.
@@ -35,7 +35,9 @@ You can see the requirements in `requirements.txt`
      
 <img src="https://github.com/user-attachments/assets/f96a748d-1179-477d-92ef-4828d0e1b068" width="400" />
 
-### Optimistic Initial Values VS Realistic Initial Values
+---
+
+## Optimistic Initial Values VS Realistic Initial Values
 
 The simulation calculates the percentage of optimal actions over time for each bandit. The results are plotted as follows:
 
