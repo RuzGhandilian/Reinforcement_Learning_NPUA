@@ -12,8 +12,8 @@ This repository contains a series of projects developed as part of the Reinforce
 - Ability to play against the trained AI.
 ### Project 2: Multi-Armed Bandit Problem
 - Exploration of the exploration-exploitation trade-off in the context of the multi-armed bandit problem.
-- Implementation and comparison of strategies such as ε-greedy algorithm, Upper Confidence Bound (UCB), and gradient bandit algorithms.
 - Comparison of Optimistic Initial Values and Realistic Initial Values
+- Implementation and comparison of strategies such as ε-greedy algorithm, Upper Confidence Bound (UCB), and gradient bandit algorithms.
 
 ---
 
