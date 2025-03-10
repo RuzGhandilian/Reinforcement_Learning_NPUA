@@ -142,6 +142,28 @@ class Bandit:
 
         # endregion ε-greedy
 
+        # region UCB
+
+        if self.confidence_level is not None:
+            UCB_estimation = self.estimated_action_values + self.confidence_level * np.sqrt(np.log(self.time + 1)) / (self.action_selection_count + 1e-5)
+
+            action = np.random.choice(np.where(UCB_estimation == np.max(UCB_estimation))[0])
+            return action
+
+        # endregion UCB
+
+        # region GBA
+
+        if self.use_gradient:
+
+            exponential_estimation = np.exp(self.estimated_action_values)
+
+            self.action_probability = exponential_estimation / np.sum(exponential_estimation)
+
+            return np.random.choice(self.actions, p = self.action_probability)
+
+        # endregion GBA
+
         # region Greedy
 
         # Greedy action selection: select one of the actions with the highest estimated value, that is, one of the greedy actions.
