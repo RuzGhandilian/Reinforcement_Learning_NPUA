@@ -31,8 +31,7 @@ You can see the requirements in `requirements.txt`
 
 2. **Optimal Strategy**:
    - A small amount of exploration (`ε = 0.01`) is optimal for maximizing both average reward and the percentage of optimal actions over time.
-  
-     
+
 <img src="https://github.com/user-attachments/assets/f96a748d-1179-477d-92ef-4828d0e1b068" width="400" />
 
 ---
@@ -45,7 +44,6 @@ The simulation calculates the percentage of optimal actions over time for each b
 2. **Bandit 2 (`ε = 0.1, 𝑄₁(𝑎) = 0`)**: Represents an epsilon-greedy strategy with realistic initial values.
 
 <img src="https://github.com/user-attachments/assets/9b01d312-d812-460b-a7b3-50aa9d0ab5f1" width="400" />
-
 
 
  - In **stationary environments**, this method forces early exploration: actions with high initial values eventually get corrected if they’re not actually optimal.
@@ -61,6 +59,37 @@ After extending the simulation, I found that **the optimistic method (`ε = 0, Q
 - The **ε-greedy method (`ε = 0.1, Q₁(a) = 0`) continues exploring**, even after finding the optimal action, leading to **unnecessary losses**.  
 
 Because **exploration isn’t needed indefinitely** in a stationary environment, the **optimistic greedy approach** proves to be more efficient.  
+
+## Upper Confidence Bound (UCB) Action Selection
+
+The **UCB algorithm** selects actions by balancing **exploration** and **exploitation** using a confidence-based approach.  
+- It prioritizes under-explored actions based on an **uncertainty term (c = 2)**.  
+- Over time, exploration decreases as the agent becomes more confident in the best action.  
+
+### Simulation:
+- **Bandit 1:** UCB (`c = 2`), sample-average method.  
+- **Bandit 2:** ε-greedy (`ε = 0.1`), sample-average method.  
+- **Result:** UCB achieves **higher rewards** by focusing exploration where needed.  
+
+<img src="https://github.com/user-attachments/assets/02d38a28-7073-4998-b9a7-8c0b0c7903cf" width="400" />
+
+
+---
+
+## Gradient Bandit Algorithm (GBA)
+
+The **Gradient Bandit algorithm** dynamically adjusts action probabilities based on **policy gradient techniques**.  
+- Uses **preference scores** rather than value estimates.  
+- Incorporates a **learning rate (α)** and **baseline reward** for better adaptation.  
+
+### Simulation:
+- **Variations tested:**  
+  - `α = 0.1` and `α = 0.4`  
+  - With and without **baseline reward**  
+- **Result:** Higher `α` leads to **faster learning**, while using a baseline improves stability.
+
+<img src="https://github.com/user-attachments/assets/bf90ec58-b7af-4229-8cf7-86a0dea06682" width="400" />
+
 
 
 ---
