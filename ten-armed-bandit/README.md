@@ -20,17 +20,16 @@ This project explores various strategies for solving the **Multi-Armed Bandit (M
 ---
 
 ## Requirements
-To run the project, install the required dependencies:
-```bash
-pip install numpy matplotlib tqdm
-```
+You can see the requirements in `requirements.txt`
 
 ---
 
 ## Results and Findings
 
-### 1. **Epsilon-Greedy Action Selection**
-   - **Exploration vs. Exploitation**: 
+---
+
+##  **Greedy Action Selection vs ε-greedy Action Selection**
+**Exploration vs. Exploitation**: 
      - Higher epsilon values (`ε = 0.10`) encourage more exploration, which helps discover better actions early but may reduce long-term performance.
      - Lower epsilon values (`ε = 0.01`) strike a balance, leading to better long-term results by gradually increasing the percentage of optimal actions.
      - Greedy strategy (`ε = 0.00`) performs poorly due to lack of exploration.
@@ -38,34 +37,40 @@ pip install numpy matplotlib tqdm
 
    ![Epsilon-Greedy Results](https://github.com/user-attachments/assets/f96a748d-1179-477d-92ef-4828d0e1b068)
 
+**Optimal Strategy**:
+   - A small amount of exploration (`ε = 0.01`) is optimal for maximizing both average reward and the percentage of optimal actions over time.
+
 ---
 
-### 2. **Optimistic Initial Values vs. Realistic Initial Values**
-   - **Optimistic Initialization (`ε = 0, Q₁(a) = 5`)**: Encourages early exploration by setting high initial action values. This method works well in **stationary environments** because the agent eventually converges to the optimal action.
-   - **Realistic Initialization (`ε = 0.1, Q₁(a) = 0`)**: Continues exploring even after finding the optimal action, leading to unnecessary losses.
-   - **Key Insight**: Optimistic initialization performs better in stationary environments because it efficiently balances exploration and exploitation without requiring indefinite exploration.
+## **Optimistic Initial Values vs. Realistic Initial Values**
+   - **Optimistic Initialization (`ε = 0, Q₁(a) = 5`)**: Represents a greedy strategy with optimistic initial values.
+   - **Realistic Initialization (`ε = 0.1, Q₁(a) = 0`)**: Represents an epsilon-greedy strategy with realistic initial values.
 
    ![Optimistic vs. Realistic](https://github.com/user-attachments/assets/9b01d312-d812-460b-a7b3-50aa9d0ab5f1)
 
+   Optimistic initialization performs better in stationary environments because it efficiently balances exploration and exploitation without requiring indefinite exploration.
+
 ---
 
-### 3. **Upper Confidence Bound (UCB) Action Selection**
+## **Upper Confidence Bound (UCB) Action Selection**
    - **UCB Algorithm**: Balances exploration and exploitation by prioritizing under-explored actions using a confidence-based term (`c = 2`).
    - **Simulation Results**: UCB achieves higher rewards compared to epsilon-greedy (`ε = 0.1`) by focusing exploration where it is most needed.
-   - **Advantage**: UCB dynamically adjusts exploration based on uncertainty, making it more efficient in stationary environments.
 
    ![UCB Results](https://github.com/user-attachments/assets/02d38a28-7073-4998-b9a7-8c0b0c7903cf)
 
+UCB dynamically adjusts exploration based on uncertainty, making it more efficient in stationary environments.
+
 ---
 
-### 4. **Gradient Bandit Algorithm (GBA)**
-   - **GBA Overview**: Adjusts action probabilities dynamically using **preference scores** and a **learning rate (α)**. It incorporates a **baseline reward** for stability.
+##  **Gradient Bandit Algorithm (GBA)**
+   - **GBA Algorithm**: Adjusts action probabilities dynamically using **preference scores** and a **learning rate (α)**. It incorporates a **baseline reward** for stability.
    - **Simulation Results**:
      - Higher learning rates (`α = 0.4`) lead to faster learning but may reduce stability.
      - Using a baseline reward improves performance by providing a reference point for updates.
-   - **Key Insight**: GBA is effective for adapting to changing environments but requires careful tuning of parameters.
 
    ![GBA Results](https://github.com/user-attachments/assets/f305ed46-5c97-40c9-bb09-d26692dd843a)
+
+GBA is effective for adapting to changing environments but requires careful tuning of parameters.
 
 ---
 
