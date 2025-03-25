@@ -47,7 +47,7 @@ Solves the **Bellman Expectation Equation** for a fixed policy π:
 ![Random Policy Values](generated_images/figure_3_2.png)  
 - **Key Observations**:  
   - States near edges have negative values due to high penalty probability.  
-  - State A's value (7.8) < +10 due to transition to A' (vulnerable to edges).  
+  - State A's value (8,79) < +10 due to transition to A' (vulnerable to edges).  
   - Demonstrates *policy evaluation* for a given π.  
 
 ### **Value Iteration (Optimal Policy)**  
