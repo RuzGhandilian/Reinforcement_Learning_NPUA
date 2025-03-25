@@ -86,10 +86,8 @@ These findings highlight the importance of choosing the right strategy based on 
 ---
 
 ## How to Run
-1. Install dependencies:
-   ```bash
-   pip install numpy matplotlib tqdm
-   ```
+1. Install dependencies
+
 2. Run the `ten_armed_testbed.ipynb` notebook:
    ```bash
    python ten_armed_testbed.ipynb
