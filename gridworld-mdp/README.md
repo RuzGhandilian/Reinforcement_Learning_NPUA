@@ -21,7 +21,7 @@ This project implements **MDP solution methods** (policy evaluation and value it
 ### **1. Policy Evaluation**  
 Solves the **Bellman Expectation Equation** for a fixed policy π:
 
-![Policy Evaluation](https://latex.codecogs.com/svg.image?\color{white}v_\pi(s)%20=%20\sum_a%20\pi(a|s)%20\sum_{s'}%20p(s'|s,a)%20[r%20+%20\gamma%20v_\pi(s')])
+![Policy Evaluation](https://latex.codecogs.com/svg.image?\color{cyan}v_\pi(s)%20=%20\sum_a%20\pi(a|s)%20\sum_{s'}%20p(s'|s,a)%20[r%20+%20\gamma%20v_\pi(s')])
 
 
 - **Input**: Uniform random policy (π(a|s) = 0.25 ∀a)  
@@ -32,11 +32,11 @@ Solves the **Bellman Expectation Equation** for a fixed policy π:
 - Solves the **Bellman Optimality Equation** by iteratively updating \( v(s) \) and improving the policy.
 - At each iteration, the update rule is:
 
-![Value Iteration](https://latex.codecogs.com/svg.image?\color{white}v(s)%20\leftarrow%20\max_a%20\sum_{s'}%20p(s'|s,a)%20[r%20+%20\gamma%20v(s')])
+![Value Iteration](https://latex.codecogs.com/svg.image?\color{cyan}v(s)%20\leftarrow%20\max_a%20\sum_{s'}%20p(s'|s,a)%20[r%20+%20\gamma%20v(s')])
 
 - Once \( v(s) \) converges, the optimal policy is derived as:
 
-![Optimal Policy](https://latex.codecogs.com/svg.image?\color{white}\pi_*(s)%20=%20\arg\max_a%20\sum_{s'}%20p(s'|s,a)%20[r%20+%20\gamma%20v_*(s')])
+![Optimal Policy](https://latex.codecogs.com/svg.image?\color{cyan}\pi_*(s)%20=%20\arg\max_a%20\sum_{s'}%20p(s'|s,a)%20[r%20+%20\gamma%20v_*(s')])
 
 - **Output**: Optimal value function + policy (Figure 3.5)  
 
