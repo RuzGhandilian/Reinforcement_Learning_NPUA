@@ -10,6 +10,7 @@ grid_size = 4
 
 # Possible 4 actions on a grid (denoted as 𝒜 = {left, up, right, down})
 actions = [np.array([0, -1]), np.array([-1, 0]), np.array([0, 1]), np.array([1, 0])]
+# avelacnel ankyunagcery
 
 # Suppose the agent selects all 4 actions with equal probability in all states => the probability of each action will be 1/4.
 action_probability = 0.25
@@ -30,7 +31,7 @@ def is_terminal(state):
     # region Body
 
     # Get the next state's coordinates
-    x, y = state
+    x, y = state # listt unpackingg
 
     # Return True if the state is at the vertices of the main diagonal; otherwise, return False
     return (x == 0 and y == 0) or (x == grid_size - 1 and y == grid_size - 1)
@@ -116,47 +117,51 @@ def compute_state_value(in_place=True, discount=1.0, threshold=1e-4):
     # region Body
 
     # New values of state-value function table (denoted as 𝑣_𝑘+1 (𝑠))
-
+    new_state_values = np.zeros((grid_size,grid_size))
 
     # Initialize number of iterations
-
+    iterations = 0
 
     # Iterate until value convergence
+    while True:
 
         # Compute state-values for in-place and out-of-place cases
-
+        state_values = new_state_values if in_place else new_state_values.copy()
 
         # Old values of state-value function table (denoted as 𝑣_𝑘 (𝑠))
-
+        old_state_values = state_values.copy()
 
         # Iterate over all states (i.e. on a grid)
-
+        for i in range(grid_size):
+            for j in range(grid_size):
 
                 # New state-value
-
+                value = 0
 
                 # For every action
-
+                for action in actions:
                     # get the current state
-
+                    state = [i, j]
 
                     # get the next state and reward
-
+                    next_state, reward = step(state, action)
 
                     # compute Bellman equation for 𝑣_𝜋
+                    value += action_probability * (reward + discount * state_values[next_state[0], [next_state[1]]])
 
 
                 # Assign the computed value as new state-value
-
+                new_state_values[i, j] = value
 
         # Check value convergence
-
+        max_delta_value = abs(new_state_values - old_state_values).max()
+        if max_delta_value < threshold:
+            break
 
         # Increment number of iterations
+        iterations += 1
 
-
-
-
+    return new_state_values, iterations
     # endregion Body
 
 # endregion Functions
