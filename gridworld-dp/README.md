@@ -28,6 +28,7 @@ Solves the **Bellman Expectation Equation** for a fixed policy π using in-place
 
 ### **2. Policy Improvement**  
 Derives a **greedy policy** π' from the evaluated value function:  
+
 ![Greedy Policy](https://latex.codecogs.com/svg.image?\color{cyan}pi'(s)%20=%20\arg\max_a%20\sum_{s'}%20p(s'|s,a)%20[r%20+%20\gamma%20v_\pi(s')])  
 
 π' is guaranteed to be better than or equal to π (per the Policy Improvement Theorem).  
