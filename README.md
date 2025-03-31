@@ -29,6 +29,6 @@ This repository contains a series of projects developed as part of the Reinforce
 ---
 
 ## Each project directory contains:
-- **code/**: Source code for the implementation.
-- **results/**: Experimental results, including plots, tables, and analysis.
+- **src/**: Source code for the implementation.
+- **generated_images/**: Experimental results, including plots, tables, and analysis.
 - **README.md**: Detailed documentation specific to the project, including setup instructions, methodology, and key findings.
