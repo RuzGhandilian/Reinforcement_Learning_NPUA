@@ -14,8 +14,6 @@ This project implements **MDP solution methods** (policy evaluation and value it
 
 ---
 
-
-
 ## **Algorithms Implemented**
 
 ### **1. Policy Evaluation**  
