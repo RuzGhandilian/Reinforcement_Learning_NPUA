@@ -10,7 +10,6 @@ grid_size = 4
 
 # Possible 4 actions on a grid (denoted as 𝒜 = {left, up, right, down})
 actions = [np.array([0, -1]), np.array([-1, 0]), np.array([0, 1]), np.array([1, 0])]
-# avelacnel ankyunagcery
 
 # Suppose the agent selects all 4 actions with equal probability in all states => the probability of each action will be 1/4.
 action_probability = 0.25
@@ -31,7 +30,7 @@ def is_terminal(state):
     # region Body
 
     # Get the next state's coordinates
-    x, y = state # listt unpackingg
+    x, y = state
 
     # Return True if the state is at the vertices of the main diagonal; otherwise, return False
     return (x == 0 and y == 0) or (x == grid_size - 1 and y == grid_size - 1)
