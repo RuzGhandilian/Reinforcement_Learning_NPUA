@@ -18,7 +18,8 @@ This project implements **Dynamic Programming (DP)** methods—specifically **it
 ## **Algorithms Implemented**  
 ### **1. Iterative Policy Evaluation**  
 Solves the **Bellman Expectation Equation** for a fixed policy π using in-place or out-of-place updates:  
-![Bellman Equation](https://latex.codecogs.com/svg.image?\color{cyan}v_\pi(s)%20=%20\begin{cases}%200%20&%20\text{if%20}s%20\text{%20is%20terminal}%20\\%20\sum_a%20\pi(a|s)%20\sum_{s'}%20p(s'|s,a)%20[r%20+%20\gamma%20v_\pi(s')]%20&%20\text{otherwise}%20\end{cases})  
+
+![Policy Evaluation](https://latex.codecogs.com/svg.image?\color{cyan}v_{k+1}(s)%20=%20\sum_a%20\pi(a|s)%20\sum_{s'}%20p(s'|s,a)%20[r%20+%20\gamma%20v_k(s')])  
 
 - **Input**: Random policy, γ=1.0, threshold=1e-4.  
 - **Output**: Converged value function (negation of expected steps to termination).  
