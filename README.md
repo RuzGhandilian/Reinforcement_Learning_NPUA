@@ -21,7 +21,7 @@ This repository contains a series of projects developed as part of the Reinforce
 - Visualization of value function convergence under random and optimal policies.  
 - Demonstration of Bellman equations in finite MDPs.  
 
-###  Project 4: [Dynamic Programming](https://github.com/RuzGhandilian/Reinforcement_Learning_NPUA/tree/master/gridworld-dp) Dynamic Programming (DP) in Grid-World  
+###  Project 4: [Dynamic Programming](https://github.com/RuzGhandilian/Reinforcement_Learning_NPUA/tree/master/gridworld-dp) (DP) in Grid-World  
 - **Policy evaluation** and **improvement** in a 4×4 grid-world with terminal states.  
 - Comparison of **in-place** vs. **out-of-place** DP updates.  
 - Theoretical analysis of policy improvement guarantees.  
