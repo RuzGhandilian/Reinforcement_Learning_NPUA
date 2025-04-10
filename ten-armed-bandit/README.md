@@ -35,7 +35,7 @@ You can see the requirements in `requirements.txt`
      - Greedy strategy (`ε = 0.00`) performs poorly due to lack of exploration.
    - **Optimal Strategy**: A small amount of exploration (`ε = 0.01`) is ideal for maximizing both average reward and the percentage of optimal actions over time.
 
-   ![Epsilon-Greedy Results](https://github.com/user-attachments/assets/f96a748d-1179-477d-92ef-4828d0e1b068)
+<img src="https://github.com/user-attachments/assets/f96a748d-1179-477d-92ef-4828d0e1b068" alt="Epsilon-Greedy Results" width="500"/>
 
 **Optimal Strategy**:
    - A small amount of exploration (`ε = 0.01`) is optimal for maximizing both average reward and the percentage of optimal actions over time.
