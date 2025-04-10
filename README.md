@@ -39,7 +39,7 @@ This repository contains a series of projects developed as part of the Reinforce
 
 ---
 
-### Project 5: [Gambler’s Problem](https://github.com/RuzGhandilian/Reinforcement_Learning_NPUA/tree/master/gamblers-problem) Value Iteration Approach
+### Project 5: [Gambler’s Problem](https://github.com/RuzGhandilian/Reinforcement_Learning_NPUA/tree/master/gambler-problem) Value Iteration Approach
 - Implementation of **Value Iteration** for solving the Gambler's Problem in a finite Markov Decision Process (MDP).
 - Exploration of how different stake choices maximize the probability of reaching the goal.
 - Demonstration of Bellman equations in the context of the gambler’s MDP.  
