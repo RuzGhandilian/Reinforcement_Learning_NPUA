@@ -39,7 +39,7 @@ The implementation visualizes:
 - **Top Plot:** Shows how value estimates evolve with each sweep of value iteration. The value function converges quickly for most states, especially near the goal.
 - **Bottom Plot:** Shows the final policy (stake) for each capital. The spikes indicate the optimal bets, which are often either very small or very large. The result matches Figure 4.3 from Sutton’s book.
 
-![Figure 4.3](book_images/Figure_4_3.png)
+![Figure 4.3](https://github.com/RuzGhandilian/Reinforcement_Learning_NPUA/blob/master/gambler-problem/book_images/Figure_4_3.PNG)
 
 ---
 
