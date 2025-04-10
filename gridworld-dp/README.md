@@ -78,7 +78,3 @@ Derives a **greedy policy** π' from the evaluated value function:
    - Value function plots saved in `../generated_images/`.  
    - Compare `figure_4_1_in_place.png` (faster) vs. `figure_4_1_out_place.png` (stable).  
 
----
-
-## **References**  
-- Sutton & Barto, *Reinforcement Learning: An Introduction* (Example 4.1, Figure 4.1).

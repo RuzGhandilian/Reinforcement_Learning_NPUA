@@ -24,6 +24,7 @@ This project implements the **Gambler’s Problem** using the **Value Iteration*
 - **Policy Extraction:**
   - For each state, chooses the action (stake) that maximizes the expected value.
 
+
 ---
 
 ## Results and Insights
@@ -38,6 +39,8 @@ The implementation visualizes:
 - **Top Plot:** Shows how value estimates evolve with each sweep of value iteration. The value function converges quickly for most states, especially near the goal.
 - **Bottom Plot:** Shows the final policy (stake) for each capital. The spikes indicate the optimal bets, which are often either very small or very large. The result matches Figure 4.3 from Sutton’s book.
 
+![Figure 4.3](book_images/Figure_4_3.png)
+
 ---
 
 ## **How to Run**  
@@ -49,8 +52,3 @@ The implementation visualizes:
    ```
 3. Generated plots are saved in `../generated_images/`.
 
----
-
-## References
-- Sutton, R. S., & Barto, A. G. (2018). Reinforcement Learning: An Introduction (2nd Edition), Chapter 4: Dynamic Programming.
-- The implementation in this repository replicates Figure 4.3 from the book, demonstrating the use of value iteration in solving a finite Markov Decision Process.

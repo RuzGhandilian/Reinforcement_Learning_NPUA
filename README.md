@@ -26,6 +26,15 @@ This repository contains a series of projects developed as part of the Reinforce
 - Comparison of **in-place** vs. **out-of-place** DP updates.  
 - Theoretical analysis of policy improvement guarantees.  
 
+
+### Project 5: [Gambler’s Problem](https://github.com/RuzGhandilian/Reinforcement_Learning_NPUA/tree/master/gamblers-problem) Value Iteration Approach
+- Implementation of **Value Iteration** for solving the Gambler's Problem in a finite Markov Decision Process (MDP).
+- Exploration of how different stake choices maximize the probability of reaching the goal.
+- Demonstration of Bellman equations in the context of the gambler’s MDP.
+
+---
+
+Now the **Gambler’s Problem** is listed as Project 5, along with the other projects in your repository! Let me know if you'd like any further adjustments.
 ---
 
 ## Each project directory contains:

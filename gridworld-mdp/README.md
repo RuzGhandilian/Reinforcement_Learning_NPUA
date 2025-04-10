@@ -82,3 +82,4 @@ Solves the **Bellman Expectation Equation** for a fixed policy π:
    jupyter notebook grid_world.ipynb
    ```
 3. Generated plots are saved in `../generated_images/`.
+

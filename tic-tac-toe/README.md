@@ -1,52 +1,72 @@
 # Tic-Tac-Toe Reinforcement Learning Project
 
-This project is a **Reinforcement Learning (RL)** implementation of the classic Tic-Tac-Toe game. It was developed as part of my university program at **NPUA (National Polytechnic University of Armenia)**. The goal is to train an RL agent to play Tic-Tac-Toe optimally and compete against another RL agent or a human player.
+This project implements **Reinforcement Learning (RL)** for the classic **Tic-Tac-Toe** game. The goal of the project is to train an RL agent to play Tic-Tac-Toe optimally. The agent can then compete against another RL agent or a human player. This implementation demonstrates **Temporal-Difference Learning** and **ε-greedy strategies**.
 
 ---
 
 ## **Features**
 
-- **Reinforcement Learning Player (RLPlayer)**:
-  - Uses Temporal-Difference Learning to estimate state values.
-  - Explores moves with ε-greedy strategy during training.
-  - Saves and loads learned policies for reuse.
-
-- **Human Player**:
-  - Allows a human to play against the trained RL agent.
-
-- **Judge**:
-  - Manages the game flow between two players (RL vs RL or RL vs Human).
-
-- **State Management**:
-  - Represents the Tic-Tac-Toe board and calculates unique hash values for each state.
-  - Checks for game-ending conditions (win, lose, or tie).
+| **Feature**                | **Description**                                                                                                                                     |
+|----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Reinforcement Learning Player (RLPlayer)** | - Uses **Temporal-Difference Learning** to estimate state values. <br> - Explores moves with the **ε-greedy strategy** during training. <br> - Saves and loads learned policies for reuse. |
+| **Human Player**            | Allows a human to play against the trained RL agent for testing its performance.                                                                    |
+| **Judge**                   | Manages the game flow, ensuring turns are followed correctly and determining the winner.                                                            |
+| **State Management**        | - Represents the Tic-Tac-Toe board and generates unique state hashes. <br> - Checks for **win**, **lose**, or **tie** conditions after every move. |
 
 ---
 
 ## **How It Works**
 
-1. **Training**:
-   - Two RL players train by playing against each other for a specified number of epochs.
-   - The win rates are tracked and printed periodically.
+### **Training Process**
 
-2. **Competition**:
-   - Two trained RL players compete against each other to evaluate their performance.
+1. **Training the Agent**:
+   - Two RL agents play against each other for a specified number of epochs.
+   - The agents adjust their strategies based on game outcomes (win/loss/tie).
+   - The **win rates** are tracked and displayed periodically.
 
-3. **Play Mode**:
-   - A human can play against the trained RL agent to test its performance.
+2. **RL Agent vs RL Agent**:
+   - After training, the agents compete against each other to evaluate how well they learned to play Tic-Tac-Toe optimally.
+
+3. **Human vs RL Agent**:
+   - A human player can compete against the trained RL agent, which continuously adapts to the human's moves.
 
 
+---
+
+## **File Structure**
+
+| **File**                 | **Description**                                                                 |
+|--------------------------|---------------------------------------------------------------------------------|
+| `state.py`               | Defines the Tic-Tac-Toe board state, including state representation and game-ending conditions. |
+| `player.py`              | Contains the RLPlayer class that uses Temporal-Difference Learning with the ε-greedy strategy. |
+| `judge.py`               | Manages the game flow, including turns and win/loss/tie determination. |
+| `tic_tac_toe.py`         | The main script to run the training, competition, or human-agent interaction. |
+
+---
+
+## **Training Parameters**
+
+| **Parameter**            | **Description**                                                                            | **Default Value** |
+|--------------------------|--------------------------------------------------------------------------------------------|-------------------|
+| **Epochs**               | Number of training games played between two RL agents.                                     | 1000 games        |
+| **Exploration Rate (ε)** | The exploration rate for the ε-greedy strategy (balance between exploration and exploitation). | 0.1 (10% exploration) |
+| **Learning Rate**        | The rate at which the agent updates its policy based on new experiences.                   | 0.5               |
+| **Discount Factor (γ)**  | The weight given to future rewards relative to immediate rewards.                          | 0.9               |
 
 ---
 
 ## **How to Run**
 
-1. Clone the repository or download the files:
-   - `state.py`
-   - `player.py`
-   - `judge.py`
-   - `tic_tac_toe.py`
+### **Clone the Repository**
 
-2. Run the main script:
+1. Clone or download the repository:
+   ```bash
+   git clone https://github.com/RuzGhandilian/Tic-Tac-Toe-Reinforcement-Learning.git
+   ```
+
+### **Running the Game**
+
+3. Run the main script:
    ```bash
    python tic_tac_toe.py
+   ```
