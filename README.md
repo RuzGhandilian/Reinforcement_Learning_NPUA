@@ -1,6 +1,5 @@
 # NPUA Reinforcement Learning Course Projects
 
-## Overview
 This repository contains a series of projects developed as part of the Reinforcement Learning (RL) course at the National Polytechnic University of Armenia (NPUA). The projects are based on the foundational concepts presented in [*Reinforcement Learning: An Introduction* by Sutton and Barto](https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf). Each project focuses on implementing and analyzing key RL algorithms, with an emphasis on both theoretical understanding and practical application.
 
 ---
