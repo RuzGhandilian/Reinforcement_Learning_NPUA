@@ -69,12 +69,12 @@ Derives a **greedy policy** π' from the evaluated value function:
 
 ## **How to Run**  
 
-2. **Run the Notebook**:  
+1. **Run the Notebook**:  
    ```bash
    jupyter notebook notebooks/grid_word.ipynb
    ```  
 
-3. **Generated Outputs**:  
+2. **Generated Outputs**:  
    - Value function plots saved in `../generated_images/`.  
    - Compare `figure_4_1_in_place.png` (faster) vs. `figure_4_1_out_place.png` (stable).  
 

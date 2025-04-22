@@ -1,3 +1,4 @@
+
 # NPUA Reinforcement Learning Course Projects
 
 This repository contains a series of projects developed as part of the Reinforcement Learning (RL) course at the National Polytechnic University of Armenia (NPUA). The projects are based on the foundational concepts presented in [*Reinforcement Learning: An Introduction* by Sutton and Barto](https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf). Each project focuses on implementing and analyzing key RL algorithms, with an emphasis on both theoretical understanding and practical application.
@@ -6,7 +7,7 @@ This repository contains a series of projects developed as part of the Reinforce
 
 ## Projects Overview
 
-### Project 1: [Tic-Tac-Toe](https://github.com/RuzGhandilian/Reinforcement_Learning_NPUA/tree/master/tic-tac-toe) Game implementation
+### Project 1: [Tic-Tac-Toe](https://github.com/RuzGhandilian/Reinforcement_Learning_NPUA/tree/master/tic-tac-toe) Game Implementation
 - Implementation of a Tic-Tac-Toe environment.
 - Reinforcement Learning agent.
 - Ability to play against the trained AI.  
@@ -22,7 +23,7 @@ This repository contains a series of projects developed as part of the Reinforce
 
 ---
 
-###  Project 3: [Markov Decision Process](https://github.com/RuzGhandilian/Reinforcement_Learning_NPUA/tree/master/gridworld-mdp) (MDP) in Grid-World
+### Project 3: [Markov Decision Process](https://github.com/RuzGhandilian/Reinforcement_Learning_NPUA/tree/master/gridworld-mdp) (MDP) in Grid-World
 - Implementation of **policy evaluation** and **value iteration** for a 5×5 grid-world.  
 - Visualization of value function convergence under random and optimal policies.  
 - Demonstration of Bellman equations in finite MDPs.  
@@ -30,7 +31,7 @@ This repository contains a series of projects developed as part of the Reinforce
 
 ---
 
-###  Project 4: [Dynamic Programming](https://github.com/RuzGhandilian/Reinforcement_Learning_NPUA/tree/master/gridworld-dp) (DP) in Grid-World  
+### Project 4: [Dynamic Programming](https://github.com/RuzGhandilian/Reinforcement_Learning_NPUA/tree/master/gridworld-dp) (DP) in Grid-World  
 - **Policy evaluation** and **improvement** in a 4×4 grid-world with terminal states.  
 - Comparison of **in-place** vs. **out-of-place** DP updates.  
 - Theoretical analysis of policy improvement guarantees.  
@@ -46,7 +47,20 @@ This repository contains a series of projects developed as part of the Reinforce
 
 ---
 
+### Project 6: [Monte Carlo Methods in Blackjack](https://github.com/RuzGhandilian/Reinforcement_Learning_NPUA/tree/master/blackjack)
+- Simulation of a simplified Blackjack environment.
+- Implementation of:
+  - **On-Policy Monte Carlo** for state-value estimation.
+  - **Off-Policy Monte Carlo** using ordinary and weighted importance sampling.
+  - **Exploring Starts** for discovering optimal policies.
+- Visualization of state-value functions and action-value surfaces.
+- Analysis of sampling variance and policy convergence.  
+📘 *Based on Chapter 5: Monte Carlo Methods*
+
+---
+
 ## Each project directory contains:
 - **src/**: Source code for the implementation.
 - **generated_images/**: Experimental results, including plots, tables, and analysis.
 - **README.md**: Detailed documentation specific to the project, including setup instructions, methodology, and key findings.
+
