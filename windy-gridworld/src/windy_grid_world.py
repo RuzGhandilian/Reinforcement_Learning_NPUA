@@ -109,35 +109,37 @@ def play(action_value_estimates):
     # region Body
 
     # Track the total time steps in this episode
-
+    time_steps = 0
 
     # Initialize state at the start
-
+    state = start
 
     # Choose an action based on 𝜀-greedy algorithm
-
+    action = choose_action(action_value_estimates, state)
 
     # Keep going until getting to the goal state
-
+    while  state != goal:
         # get the next state
-
+        next_state = step(state, action)
 
         # choose the next action
-
+        next_action = choose_action(action_value_estimates, next_state)
 
         # SARSA update (Equation (6.7))
-
+        action_value_estimates[state[0], state[1], action] += (step_size * (reward +
+                            discount * action_value_estimates[next_state[0], next_state[1], next_action] -
+                                                    action_value_estimates[state[0], state[1], action]))
 
         # move to the next state
-
+        state = next_state
 
         # move to the next action
-
+        action = next_action
 
         # increment time steps
+        time_steps += 1
 
-
-
+    return time_steps
 
     # endregion Body
 
