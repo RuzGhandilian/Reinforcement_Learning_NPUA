@@ -85,15 +85,4 @@ These findings highlight the importance of choosing the right strategy based on 
 
 ---
 
-## How to Run
-1. Install dependencies
-
-2. Run the `ten_armed_testbed.ipynb` notebook:
-   ```bash
-   python ten_armed_testbed.ipynb
-   ```
-3. Generated plots are saved in `../generated_images/`.
-
----
-
 This project provides a comprehensive exploration of multi-armed bandit algorithms, offering insights into their strengths and weaknesses in different scenarios. By visualizing the results, users can better understand the trade-offs between exploration and exploitation and apply these concepts to real-world decision-making problems.

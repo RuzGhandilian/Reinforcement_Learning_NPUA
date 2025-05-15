@@ -71,15 +71,3 @@ Solves the **Bellman Expectation Equation** for a fixed policy π:
 
 3. **Optimality**:  
    - Optimal policy exists for finite MDPs (per Bellman’s principle).  
-
----
-
-## **How to Run**  
-1. Install dependencies
-
-2. Run Jupyter notebook:  
-   ```bash
-   jupyter notebook grid_world.ipynb
-   ```
-3. Generated plots are saved in `../generated_images/`.
-

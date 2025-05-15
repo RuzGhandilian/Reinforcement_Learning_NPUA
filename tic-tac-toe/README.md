@@ -52,21 +52,3 @@ This project implements **Reinforcement Learning (RL)** for the classic **Tic-Ta
 | **Exploration Rate (ε)** | The exploration rate for the ε-greedy strategy (balance between exploration and exploitation). | 0.1 (10% exploration) |
 | **Learning Rate**        | The rate at which the agent updates its policy based on new experiences.                   | 0.5               |
 | **Discount Factor (γ)**  | The weight given to future rewards relative to immediate rewards.                          | 0.9               |
-
----
-
-## **How to Run**
-
-### **Clone the Repository**
-
-1. Clone or download the repository:
-   ```bash
-   git clone https://github.com/RuzGhandilian/Tic-Tac-Toe-Reinforcement-Learning.git
-   ```
-
-### **Running the Game**
-
-3. Run the main script:
-   ```bash
-   python tic_tac_toe.py
-   ```

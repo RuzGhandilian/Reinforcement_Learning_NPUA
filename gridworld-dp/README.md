@@ -64,17 +64,3 @@ Derives a **greedy policy** π' from the evaluated value function:
 3. **DP for MDPs**:  
    - Requires **full knowledge of the environment** (transition/reward models).  
    - Uses **bootstrapping** (updating estimates from other estimates).  
-
----
-
-## **How to Run**  
-
-1. **Run the Notebook**:  
-   ```bash
-   jupyter notebook notebooks/grid_word.ipynb
-   ```  
-
-2. **Generated Outputs**:  
-   - Value function plots saved in `../generated_images/`.  
-   - Compare `figure_4_1_in_place.png` (faster) vs. `figure_4_1_out_place.png` (stable).  
-

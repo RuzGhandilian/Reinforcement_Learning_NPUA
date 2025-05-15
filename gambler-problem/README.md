@@ -41,14 +41,3 @@ The implementation visualizes:
 
 ![Figure 4.3](book_images/Figure_4_3.PNG)
 
----
-
-## **How to Run**  
-1. Install dependencies
-
-2. Run Jupyter notebook:  
-   ```bash
-   jupyter notebook gamblers_problem.ipynb
-   ```
-3. Generated plots are saved in `../generated_images/`.
-
