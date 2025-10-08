@@ -20,11 +20,13 @@ This project implements **n-step Temporal-Difference (TD(n))** prediction in the
 ## **Algorithm: n-Step TD (Prediction)**
 
 Given a trajectory $( s_0, a_0, r_1, s_1, \dots )$, for each update time $( t )$ define the **n-step return**:
+
 $$
 G_{t:t+n} ;=; \sum_{k=1}^{n} \gamma^{k-1} r_{t+k} ;+; \gamma^{n}, V(s_{t+n}) .
 $$
 
 The **TD(n) update** for a non-terminal state $( s_t )$ is:
+
 $$
 V(s_t) \leftarrow V(s_t) ;+; \alpha \left[, G_{t:t+n} ;-; V(s_t) ,\right].
 $$
