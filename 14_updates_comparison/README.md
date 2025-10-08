@@ -21,18 +21,19 @@ This project illustrates why **expectation backups** (model-based) can outperfor
 ### **1) Sample backup (model-free flavor)**
 
 * Each primitive computation draws **one sample** (X_t) from the successor distribution and updates the running mean:
-  \
-  \hat v_t \leftarrow \frac{1}{t}\sum_{i=1}^{t} X_i
-  \
+$$
+\hat{v}_t \leftarrow \frac{1}{t}\sum_{i=1}^{t} X_i
+$$
+
 
 * After (t) computations you have (t) samples.
 
 ### **2) Expectation backup (model-based flavor)**
 
 * **One expectation backup ≈ (b) primitive computations** (to average all successors once):
-  $$
-  \tilde v ;=; \frac{1}{b}\sum_{j=1}^{b} X_j
-  $$
+$$
+\tilde v ;=; \frac{1}{b}\sum_{j=1}^{b} X_j
+$$
 * With the same total budget $\le 2b$, you can afford at most **two expectation evaluations**, but each has **near-zero variance** relative to single-sample draws.
 
 **Intuition.** When (b) is large, spending computations to average many successors (expectation) reduces variance dramatically compared to building the average from one-at-a-time samples.
