@@ -36,9 +36,10 @@ This project demonstrates **maximization bias** in value-based RL and how **Doub
 
 1. **Q-Learning (off-policy, max target)**
    Update at ⟨s, a⟩ with reward ( R ) and next state ( s' ):
-   $$
-   Q(s,a) \leftarrow Q(s,a) + \alpha \Big[ R + \gamma \max_{a'} Q(s',a') - Q(s,a) \Big]
-   $$
+
+$$
+Q(s,a) \leftarrow Q(s,a) + \alpha \Big[ R + \gamma \max_{a'} Q(s',a') - Q(s,a) \Big]
+$$
 
 2. **Double Q-Learning (decoupled select–evaluate)**
    Maintain $( Q_1, Q_2 )$. On each step, flip a coin to pick which to update:
@@ -50,9 +51,9 @@ This project demonstrates **maximization bias** in value-based RL and how **Doub
 
 3. **Expected SARSA (policy expectation target)**
    Uses the **ε-greedy** action distribution at ( s' ):
-   $$
-   Q(s,a) \leftarrow Q(s,a) + \alpha \Big[ R + \gamma, \mathbb{E}*{a'\sim\pi*\epsilon(\cdot|s')} Q(s',a') - Q(s,a) \Big]
-   $$
+$$
+Q(s,a) \leftarrow Q(s,a) + \alpha \Big[ R + \gamma, \mathbb{E}*{a'\sim\pi*\epsilon(\cdot|s')} Q(s',a') - Q(s,a) \Big]
+$$
 
 4. **Double Expected SARSA**
    Same expectation idea, but selection uses ( Q_1 + Q_2 ) (or another symmetric scheme) and evaluation uses the alternate estimate to reduce bias.
