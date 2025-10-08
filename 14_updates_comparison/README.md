@@ -44,10 +44,10 @@ $$
 ---
 
 ## **Parameters**
-| Symbol | Meaning                         | Values used        |
-|:-----:|---------------------------------|--------------------|
+| Symbol | Meaning                         | Values used      |
+|:-----:|---------------------------------|------------------|
 | \(b\) | Branching factor (successors)   |  {2, 10, 100, 1000} |
-| Steps | Primitive computations (x-axis) |$ (0 \ldots 2b) $|
+| Steps | Primitive computations (x-axis) |$(0 \ldots 2b)$|
 | Metric| Error curve                     | $\text{RMS}( \hat v - v^* )$ over repeated trial |
 
 ---
