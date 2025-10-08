@@ -23,7 +23,7 @@ This project illustrates why **expectation backups** (model-based) can outperfor
 * Each primitive computation draws **one sample** (X_t) from the successor distribution and updates the running mean:
 
 $$
-\hat{v}_t \leftarrow \frac{1}{t}\sum_{i=1}^{t} X_i
+\hat{v}_t = \frac{1}{t}\sum_{i=1}^{t} X_i
 $$
 
 
