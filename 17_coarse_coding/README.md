@@ -26,7 +26,7 @@ $$
 - **Active features** for $x$ are those whose intervals contain $x$.
 - **Estimate:** sum of active weights.
 
-**Online update (per sample $(x,y)$)**
+**Online update (per sample (x,y))**
 
 $$
 \delta \leftarrow y - \hat{v}(x), \qquad
