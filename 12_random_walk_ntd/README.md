@@ -57,7 +57,7 @@ Value progression vs true values
 
 * Early in training, estimates are biased toward 0.5 (uninformed).
 * **Larger n** typically reduces bias but can increase variance; **smaller n** learns faster with stronger bootstrapping.
-* After ~100 episodes, curves approach the **analytic line** $ V(i)=\frac{i-10}{10} $.
+* After ~100 episodes, curves approach the **analytic line** $V(i)=\frac{i-10}{10}$.
 
 ---
 
