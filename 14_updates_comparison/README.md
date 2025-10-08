@@ -7,10 +7,10 @@ This project illustrates why **expectation backups** (model-based) can outperfor
 ## **Problem Setup**
 
 | Component            | Description                                                    |
-| -------------------- | -------------------------------------------------------------- |
+| -------------------- |----------------------------------------------------------------|
 | **State**            | One state with (b) possible next outcomes (successors).        |
 | **Successor values** | Drawn i.i.d. from a fixed distribution (here, a Normal).       |
-| **True value**       | (v^* = \mathbb{E}[X]), the mean of the successor distribution. |
+| **True value**       | $v^* = \mathbb{E}[X]$, the mean of the successor distribution. |
 | **Goal**             | Track the **estimation error** as computations increase.       |
 | **Budget**           | Up to (2b) primitive computations per curve.                   |
 
@@ -21,30 +21,29 @@ This project illustrates why **expectation backups** (model-based) can outperfor
 ### **1) Sample backup (model-free flavor)**
 
 * Each primitive computation draws **one sample** (X_t) from the successor distribution and updates the running mean:
-  [
+  $$
   \hat v_t \leftarrow \frac{1}{t}\sum_{i=1}^{t} X_i
-  ]
+  $$
 * After (t) computations you have (t) samples.
 
 ### **2) Expectation backup (model-based flavor)**
 
 * **One expectation backup ≈ (b) primitive computations** (to average all successors once):
-  [
+  $$
   \tilde v ;=; \frac{1}{b}\sum_{j=1}^{b} X_j
-  ]
-* With the same total budget (\le 2b), you can afford at most **two expectation evaluations**, but each has **near-zero variance** relative to single-sample draws.
+  $$
+* With the same total budget $\le 2b$, you can afford at most **two expectation evaluations**, but each has **near-zero variance** relative to single-sample draws.
 
 **Intuition.** When (b) is large, spending computations to average many successors (expectation) reduces variance dramatically compared to building the average from one-at-a-time samples.
 
 ---
 
 ## **Parameters**
-
-| Symbol | Meaning                         | Values used          |              |                         |
-| -----: | ------------------------------- | -------------------- | ------------ | ----------------------- |
-|    (b) | Branching factor (successors)   | ({2, 10, 100, 1000}) |              |                         |
-|  Steps | Primitive computations (x-axis) | (0 \ldots 2b)        |              |                         |
-| Metric | Error curve                     | (\text{RMS}(         | \hat v - v^* | )) over repeated trials |
+| Symbol | Meaning                         | Values used                |
+|:-----:|---------------------------------|----------------------------|
+| \(b\) | Branching factor (successors)   | $ (\{2, 10, 100, 1000\}\ $ |
+| Steps | Primitive computations (x-axis) | $ (0 \ldots 2b) $          |
+| Metric| Error curve                     | $\text{RMS}( \hat v - v^* )$ over repeated trial |
 
 ---
 
@@ -60,7 +59,7 @@ This project illustrates why **expectation backups** (model-based) can outperfor
 
 ## **Implementation Details**
 
-* The experiment draws a fresh set of (b) successor values from a Normal distribution and treats their average as the **ground truth** (v^*).
+* The experiment draws a fresh set of (b) successor values from a Normal distribution and treats their average as the **ground truth** $v^*$.
 * **Sample curve:** incrementally samples successors (with replacement), tracks the running mean, and logs absolute error vs. computation count.
 * **Expectation points:** compute the full mean after (b) and (2b) primitive operations to show how quickly error collapses.
 * Repeating across multiple trials smooths the **RMS error** curves.

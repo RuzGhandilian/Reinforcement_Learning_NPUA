@@ -30,16 +30,16 @@ We compare **sample updates** (real experience) against **planning updates** (si
 ### **Dyna-Q (learning + planning)**
 
 At each step: act with ε-greedy, update **Q** by **Q-Learning**, then **plan** for `planning_steps` samples from a learned model:
-[
+$$
 Q(s,a)\leftarrow Q(s,a)+\alpha\Big[r+\gamma\max_{a'}Q(s',a')-Q(s,a)\Big]
-]
+$$
 
 ### **Dyna-Q+ (time-aware model bonus)**
 
 Same as Dyna-Q, but the model adds an **exploration bonus** that grows with time since a state–action was last tried:
-[
+$$
 \tilde r ;=; r ;+; \kappa;\sqrt{t_{\text{now}}-t_{\text{last}}}
-]
+$$
 Also inserts untried actions as timestamped self-loops so planning considers them.
 
 ### **Changing Maze (non-stationary)**
@@ -49,9 +49,9 @@ Mid-run the obstacle layout switches from `old_obstacles` to `new_obstacles`, te
 ### **Prioritized Sweeping (PS)**
 
 Maintains a **predecessor graph** and a **priority queue**. Each real step computes priority
-[
+$$
 p(s,a)=\Big|,r+\gamma\max_{a'}Q(s',a')-Q(s,a),\Big|
-]
+$$
 and repeatedly backs up the **largest-priority** pairs, then enqueues affected predecessors.
 
 ---
@@ -59,13 +59,13 @@ and repeatedly backs up the **largest-priority** pairs, then enqueues affected p
 ## **Parameters**
 
 | Parameter           | Meaning                      | Typical           |
-| ------------------- | ---------------------------- | ----------------- |
-| ( \gamma )          | Discount                     | 0.95              |
-| ( \epsilon )        | ε-greedy exploration         | 0.1               |
-| ( \alpha )          | Step-size                    | 0.1               |
-| ( n_{\text{plan}} ) | Planning steps per real step | 5                 |
-| ( \kappa )          | Time-bonus weight (Dyna-Q+)  | (1\mathrm{e}{-4}) |
-| ( \theta )          | PS priority threshold        | 0 (include all)   |
+|---------------------| ---------------------------- |-------------------|
+| $ \gamma $          | Discount                     | 0.95              |
+| $ \epsilon $        | ε-greedy exploration         | 0.1               |
+| $ \alpha $          | Step-size                    | 0.1               |
+| $ n_{\text{plan}} $ | Planning steps per real step | 5                 |
+| $ \kappa $          | Time-bonus weight (Dyna-Q+)  | $1\mathrm{e}{-4}$ |
+| $ \theta $          | PS priority threshold        | 0 (include all)   |
 | Runs                | Independent averages         | 10                |
 
 ---
@@ -107,11 +107,11 @@ and repeatedly backs up the **largest-priority** pairs, then enqueues affected p
 ## **Implementation Details**
 
 * **`Maze`**: grid dynamics, obstacle switching, and optional **resolution upscaling**.
-* **Action selection**: ε-greedy over (Q(s,\cdot)); uniform tie-breaking.
+* **Action selection**: ε-greedy over $Q(s,\cdot)$; uniform tie-breaking.
 * **Models for planning**:
 
-  * *Tabular (Dyna-Q)* storing last ((s,a)!\to!(s',r)) samples,
-  * *Time-aware (Dyna-Q+)* with timestamps + (\kappa\sqrt{\Delta t}) bonus,
+  * *Tabular $Dyna-Q$* storing last $(s,a)!\to!(s',r)$ samples,
+  * *Time-aware $Dyna-Q+$* with timestamps + $\kappa\sqrt{\Delta t}$ bonus,
   * *PS model* with predecessor tracking and a binary-heap priority queue.
 * **Core loops**: `dyna_q(...)`, `changing_maze(...)`, `prioritized_sweeping(...)`.
 * **Metrics**: steps per episode, cumulative reward, and **backups until optimality**.

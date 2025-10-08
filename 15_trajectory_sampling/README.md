@@ -8,11 +8,11 @@ This project compares **on-policy trajectory sampling** against **uniform expect
 ## **Problem Setup**
 
 | Component                | Details                                                                                                            |
-| ------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| ------------------------ |--------------------------------------------------------------------------------------------------------------------|
 | **States**               | Large random MDPs with **1,000** and **10,000** non-terminal states                                                |
 | **Actions**              | 2 actions per state                                                                                                |
 | **Branching factor (b)** | Number of possible next states sampled per state–action                                                            |
-| **Transitions/Rewards**  | For each state–action, next states are drawn uniformly from the state set; rewards are i.i.d. ( \mathcal{N}(0,1) ) |
+| **Transitions/Rewards**  | For each state–action, next states are drawn uniformly from the state set; rewards are i.i.d. $ \mathcal{N}(0,1) $ |
 | **Termination**          | Each transition terminates with probability (0.1) and yields 0 reward                                              |
 | **Objective**            | Maximize the start-state value under the greedy policy induced by current estimates                                |
 
@@ -37,11 +37,11 @@ Both methods use tabular action-value estimates and greedy evaluation of the sta
 ## **Parameters**
 
 | Parameter                | Value / Range                             |
-| ------------------------ | ----------------------------------------- |
-| Discount ( \gamma )      | 1.0                                       |
+|--------------------------|-------------------------------------------|
+| Discount $ \gamma $      | 1.0                                       |
 | Termination prob.        | 0.1                                       |
-| Exploration ( \epsilon ) | 0.1                                       |
-| Branching ( b )          | ({1,3,10})                                |
+| Exploration $ \epsilon $ | 0.1                                       |
+| Branching $ b $          | ${1,3,10}$                                |
 | Max compute budget       | 20,000 expected updates                   |
 | Tasks averaged           | 30 per setting                            |
 | Eval metric              | Greedy start-state value vs. compute time |
@@ -72,7 +72,7 @@ Both methods use tabular action-value estimates and greedy evaluation of the sta
 ## **Implementation Details**
 
 * **Task generator:** builds random transition tensors and reward tables for all state–action pairs; next-state choices and termination events are vectorized and pre-sampled for speed.
-* **Backups:** for a visited ((s,a)), compute ( Q(s,a) \leftarrow (1-p_\text{term}) ,\mathbb{E}\big[r + \max_{a'} Q(s',a')\big] ) by averaging over the (b) successors.
+* **Backups:** for a visited $(s,a)$, compute $ Q(s,a) \leftarrow (1-p_\text{term}) ,\mathbb{E}\big[r + \max_{a'} Q(s',a')\big] $ by averaging over the $b$ successors.
 * **Evaluation:** periodic Monte Carlo estimates of the **greedy** start-state value with episode caps to bound roll-length.
 * **Parallelization:** multiple tasks run in parallel and are averaged to produce each curve. 
 
