@@ -50,7 +50,8 @@ $$
      This breaks the optimistic coupling that causes overestimation.
 
 3. **Expected SARSA (policy expectation target)**
-   Uses the **ε-greedy** action distribution at ( s' ):
+   Uses the **ε-greedy** action distribution at (s'):
+
 $$
 Q(s,a) \leftarrow Q(s,a) + \alpha \Big[ R + \gamma, \mathbb{E}*{a'\sim\pi*\epsilon(\cdot|s')} Q(s',a') - Q(s,a) \Big]
 $$
