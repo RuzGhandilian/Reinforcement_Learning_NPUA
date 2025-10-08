@@ -6,7 +6,7 @@ This repository contains a series of projects developed as part of the Reinforce
 
 ## **Projects Overview**
 
-### Project 1: [Tic-Tac-Toe](https://github.com/RuzGhandilian/Reinforcement_Learning_NPUA/tree/master/tic-tac-toe) Game Implementation
+### Project 1: [Tic-Tac-Toe](https://github.com/RuzGhandilian/Reinforcement_Learning_NPUA/tree/master/01_tic_tac_toe) Game Implementation
 
 * Implementation of a Tic-Tac-Toe environment.
 * Reinforcement Learning agent trained using **Temporal-Difference Learning**.
@@ -15,7 +15,7 @@ This repository contains a series of projects developed as part of the Reinforce
 
 ---
 
-### Project 2: [Multi-Armed Bandit](https://github.com/RuzGhandilian/Reinforcement_Learning_NPUA/tree/master/ten-armed-bandit) Problem
+### Project 2: [Multi-Armed Bandit](https://github.com/RuzGhandilian/Reinforcement_Learning_NPUA/tree/master/02_ten_armed_bandit) Problem
 
 * Explores the **exploration-exploitation trade-off** in the context of the multi-armed bandit problem.
 * Implements and compares strategies such as **ε-greedy**, **Upper Confidence Bound (UCB)**, and **Gradient Bandit Algorithms**.
@@ -24,7 +24,7 @@ This repository contains a series of projects developed as part of the Reinforce
 
 ---
 
-### Project 3: [Markov Decision Process](https://github.com/RuzGhandilian/Reinforcement_Learning_NPUA/tree/master/gridworld-mdp) in Grid-World
+### Project 3: [Markov Decision Process](https://github.com/RuzGhandilian/Reinforcement_Learning_NPUA/tree/master/03_gridworld_mdp) in Grid-World
 
 * Implements **Policy Evaluation** and **Value Iteration** for a 5×5 grid-world environment.
 * Visualizes value function convergence under random and optimal policies.
@@ -33,7 +33,7 @@ This repository contains a series of projects developed as part of the Reinforce
 
 ---
 
-### Project 4: [Dynamic Programming](https://github.com/RuzGhandilian/Reinforcement_Learning_NPUA/tree/master/gridworld-dp) in Grid-World
+### Project 4: [Dynamic Programming](https://github.com/RuzGhandilian/Reinforcement_Learning_NPUA/tree/master/04_gridworld_dp) in Grid-World
 
 * Implements **Iterative Policy Evaluation** and **Policy Improvement** in a 4×4 grid-world environment with terminal states.
 * Compares **in-place** vs. **out-of-place** dynamic programming updates.
@@ -42,7 +42,7 @@ This repository contains a series of projects developed as part of the Reinforce
 
 ---
 
-### Project 5: [Gambler’s Problem](https://github.com/RuzGhandilian/Reinforcement_Learning_NPUA/tree/master/gambler-problem) – Value Iteration Approach
+### Project 5: [Gambler’s Problem](https://github.com/RuzGhandilian/Reinforcement_Learning_NPUA/tree/master/05_gambler_problem) – Value Iteration Approach
 
 * Solves the **Gambler's Problem** using **Value Iteration** to maximize the probability of reaching a goal capital.
 * Visualizes value function evolution and the final optimal policy.
@@ -50,7 +50,7 @@ This repository contains a series of projects developed as part of the Reinforce
 
 ---
 
-### Project 6: [Monte Carlo Methods](https://github.com/RuzGhandilian/Reinforcement_Learning_NPUA/tree/master/blackjack) in Blackjack
+### Project 6: [Monte Carlo Methods](https://github.com/RuzGhandilian/Reinforcement_Learning_NPUA/tree/master/06_blackjack) in Blackjack
 
 * Implements **On-Policy Monte Carlo**, **Off-Policy Monte Carlo** with importance sampling, and **Exploring Starts** for optimal policy discovery.
 * Simulates a simplified Blackjack environment to visualize value functions and analyze convergence behavior.
@@ -58,7 +58,7 @@ This repository contains a series of projects developed as part of the Reinforce
 
 ---
 
-### Project 7: [Infinite Variance in Off-Policy Evaluation](https://github.com/RuzGhandilian/Reinforcement_Learning_NPUA/tree/master/infinite-variance)
+### Project 7: [Infinite Variance in Off-Policy Evaluation](https://github.com/RuzGhandilian/Reinforcement_Learning_NPUA/tree/master/07_infinite_variance)
 
 * Demonstrates the instability of **importance sampling** in off-policy evaluation.
 * Shows how policy mismatch between behavior and target policies leads to **infinite variance** in return estimates.
@@ -67,7 +67,7 @@ This repository contains a series of projects developed as part of the Reinforce
 
 ---
 
-### Project 8: [Random Walk ](https://github.com/RuzGhandilian/Reinforcement_Learning_NPUA/tree/master/random-walk) – Monte Carlo vs. Temporal-Difference Methods
+### Project 8: [Random Walk ](https://github.com/RuzGhandilian/Reinforcement_Learning_NPUA/tree/master/08_random_walk) – Monte Carlo vs. Temporal-Difference Methods
 
 * Compares **Monte Carlo (MC)** and **Temporal-Difference (TD(0))** learning methods for value prediction.
 * Analyzes the **bias-variance trade-off** and convergence behavior under batch updating.
@@ -76,7 +76,7 @@ This repository contains a series of projects developed as part of the Reinforce
 
 ---
 
-### Project 9: [Windy Gridworld ](https://github.com/RuzGhandilian/Reinforcement_Learning_NPUA/tree/master/windy-gridworld) – SARSA Algorithm Implementation
+### Project 9: [Windy Gridworld ](https://github.com/RuzGhandilian/Reinforcement_Learning_NPUA/tree/master/09_windy_gridworld) – SARSA Algorithm Implementation
 
 * Implements the **SARSA control algorithm** in the Windy Gridworld environment, introducing deterministic external disturbances.
 * Demonstrates on-policy learning with an **ε-greedy exploration strategy**.
@@ -85,7 +85,7 @@ This repository contains a series of projects developed as part of the Reinforce
 
 ---
 
-### Project 10: [Cliff Walking ](https://github.com/RuzGhandilian/Reinforcement_Learning_NPUA/tree/master/cliff-walking) – SARSA, Expected SARSA, and Q-Learning
+### Project 10: [Cliff Walking ](https://github.com/RuzGhandilian/Reinforcement_Learning_NPUA/tree/master/10_cliff_walking) – SARSA, Expected SARSA, and Q-Learning
 
 * Compares **SARSA**, **Expected SARSA**, and **Q-Learning** algorithms in the Cliff Walking environment.
 * Analyzes trade-offs between **exploration safety**, **learning stability**, and **policy optimality** under different learning strategies.
@@ -93,6 +93,44 @@ This repository contains a series of projects developed as part of the Reinforce
   📘 *Based on Chapter 6, Section 6.6: Cliff Walking Example*
 
 ---
+
+### Project 11: [Maximization_bias](https://github.com/RuzGhandilian/Reinforcement_Learning_NPUA/tree/master/11_maximization_bias) 
+  📘 *Based on 
+
+---
+
+### Project 12: [.](https://github.com/RuzGhandilian/Reinforcement_Learning_NPUA/tree/master/12_random_walk_ntd) 
+  📘 *Based on 
+
+---
+
+### Project 13: [.](https://github.com/RuzGhandilian/Reinforcement_Learning_NPUA/tree/master/13_mazes) 
+  📘 *Based on 
+
+---
+
+### Project 14: [.](https://github.com/RuzGhandilian/Reinforcement_Learning_NPUA/tree/master/14_updates_comparison) 
+  📘 *Based on 
+
+---
+
+### Project 15: [.](https://github.com/RuzGhandilian/Reinforcement_Learning_NPUA/tree/master/15_trajectory_sampling) 
+  📘 *Based on 
+
+---
+
+### Project 16: [.](https://github.com/RuzGhandilian/Reinforcement_Learning_NPUA/tree/master/16_random_walk_fa) 
+  📘 *Based on 
+
+---
+
+### Project 17: [.](https://github.com/RuzGhandilian/Reinforcement_Learning_NPUA/tree/master/17_coarse_coding) 
+  📘 *Based on 
+
+---
+
+
+
 
 ## **Project Structure**
 
