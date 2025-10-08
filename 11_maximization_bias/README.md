@@ -44,9 +44,9 @@ $$
 2. **Double Q-Learning (decoupled select–evaluate)**
    Maintain $( Q_1, Q_2 )$. On each step, flip a coin to pick which to update:
 
-   * **Select** $ a^* = \arg\max_{a'} Q_1(s',a') $
-   * **Evaluate** with the other table: $ \text{target} = R + \gamma, Q_2(s', a^*) $
-     (and vice versa when updating $ Q_2 $ ).
+   * **Select** $a^* = \arg\max_{a'} Q_1(s',a')$
+   * **Evaluate** with the other table: $\text{target} = R + \gamma, Q_2(s', a^*)$
+     (and vice versa when updating $Q_2$ ).
      This breaks the optimistic coupling that causes overestimation.
 
 3. **Expected SARSA (policy expectation target)**
