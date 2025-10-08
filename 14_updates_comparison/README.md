@@ -21,9 +21,10 @@ This project illustrates why **expectation backups** (model-based) can outperfor
 ### **1) Sample backup (model-free flavor)**
 
 * Each primitive computation draws **one sample** (X_t) from the successor distribution and updates the running mean:
-  $$
+  \
   \hat v_t \leftarrow \frac{1}{t}\sum_{i=1}^{t} X_i
-  $$
+  \
+
 * After (t) computations you have (t) samples.
 
 ### **2) Expectation backup (model-based flavor)**
