@@ -75,8 +75,8 @@ Value progression vs true values
 
 ## **Implementation Details**
 
-* **Episode generation:** start at state 10; step left/right with $ p=0.5 $; terminate at 0 or 20 with rewards −1/+1.
-* **Online TD(n):** stores visited states and rewards, computes $ G_{t:t+n} $ once enough steps have elapsed, and updates V in-place.
+* **Episode generation:** start at state 10; step left/right with $p=0.5$; terminate at 0 or 20 with rewards −1/+1.
+* **Online TD(n):** stores visited states and rewards, computes $G_{t:t+n}$ once enough steps have elapsed, and updates V in-place.
 * **Truth baseline:** vector of analytic values used for RMSE tracking and plots. 
 
 ---
@@ -95,7 +95,7 @@ Value progression vs true values
 
 * Fix RNG seeds per run to obtain stable averages.
 * Report **RMSE vs episodes** averaged over many runs (e.g., 100) for each ( n ).
-* Compare learned ( V ) to the analytic baseline $ V(i)=\frac{i-10}{10} $.
+* Compare learned ( V ) to the analytic baseline $V(i)=\frac{i-10}{10}$.
 * Sensitivity: try $( \alpha \in {0.05, 0.1, 0.2} )$ and $( n \in {1,2,4,8,16} )$.
 
 ---
