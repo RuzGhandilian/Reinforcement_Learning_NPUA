@@ -8,10 +8,10 @@ This project compares **on-policy trajectory sampling** against **uniform expect
 ## **Problem Setup**
 
 | Component                | Details                                                                                                            |
-| ------------------------ |--------------------------------------------------------------------------------------------------------------------|
+|--------------------------|--------------------------------------------------------------------------------------------------------------------|
 | **States**               | Large random MDPs with **1,000** and **10,000** non-terminal states                                                |
 | **Actions**              | 2 actions per state                                                                                                |
-| **Branching factor (b)** | Number of possible next states sampled per state–action                                                            |
+| **Branching factor $b$** | Number of possible next states sampled per state–action                                                            |
 | **Transitions/Rewards**  | For each state–action, next states are drawn uniformly from the state set; rewards are i.i.d. $ \mathcal{N}(0,1) $ |
 | **Termination**          | Each transition terminates with probability (0.1) and yields 0 reward                                              |
 | **Objective**            | Maximize the start-state value under the greedy policy induced by current estimates                                |
@@ -24,7 +24,7 @@ The environment and experiment driver construct many independent random tasks an
 
 ### **On-policy trajectory sampling**
 
-Simulates a single agent run using (\epsilon)-greedy over current (Q) and updates the visited **state–action** via an **expected backup** over its (b) successors (model known). Distribution of backups concentrates on states encountered by the current policy, naturally emphasizing **relevant regions** of the state space. 
+Simulates a single agent run using $\epsilon$ -greedy over current (Q) and updates the visited **state–action** via an **expected backup** over its (b) successors (model known). Distribution of backups concentrates on states encountered by the current policy, naturally emphasizing **relevant regions** of the state space. 
 
 ### **Uniform expected updates**
 
@@ -80,11 +80,11 @@ Both methods use tabular action-value estimates and greedy evaluation of the sta
 
 ## **Project Structure**
 
-| File / Notebook                   | Description                                                                                                                 |
-| --------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `trajectory_sampling.py`          | Core experiment code: random task generator, **on-policy** vs **uniform** expected updates, evaluation, and parallel runs.  |
-| `trajectory_sampling.ipynb`       | Driver notebook: sweeps over state counts and (b), aggregates results, and renders figures.                                 |
-| `generated_images/figure_8_8.png` | Final figure (two panels for 1,000 and 10,000 states).                                                                      |
+| File / Notebook                   | Description                                                                                                                |
+| --------------------------------- |----------------------------------------------------------------------------------------------------------------------------|
+| `trajectory_sampling.py`          | Core experiment code: random task generator, **on-policy** vs **uniform** expected updates, evaluation, and parallel runs. |
+| `trajectory_sampling.ipynb`       | Driver notebook: sweeps over state counts and $b$, aggregates results, and renders figures.                                |
+| `generated_images/figure_8_8.png` | Final figure (two panels for 1,000 and 10,000 states).                                                                     |
 
 ---
 
