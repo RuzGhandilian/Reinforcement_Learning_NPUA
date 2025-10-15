@@ -158,8 +158,8 @@ This repository contains a series of projects developed as part of the Reinforce
 
 * Applies **linear function approximation** to the random-walk value-prediction task.
 * Compares **semi-gradient TD** vs **(gradient) Monte Carlo** for stability, learning speed, and RMSE.
-* Discusses the influence of **feature design** and **step size** on convergence.
- 
+* Discusses the influence of **feature design** and **step size** on convergence.  
+
 📘 *Based on Chapter 9: On-Policy Prediction with Function Approximation*
 
 ---
