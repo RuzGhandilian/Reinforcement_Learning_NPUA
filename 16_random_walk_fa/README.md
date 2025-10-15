@@ -41,15 +41,17 @@ All methods approximate $v(s)$ linearly: $\ \hat v(s)=\mathbf{w}^\top {\phi}(s)$
 
 * **Gradient Monte Carlo (on-policy prediction)**
   For each visited $s$ in an episode with terminal return $G$,
-  $$
-  \mathbf{w}\leftarrow \mathbf{w} + \alpha,\big(G - \hat v(s)\big),{\phi}(s).
-  $$
+
+$$
+\mathbf{w}\leftarrow \mathbf{w} + \alpha,\big(G - \hat v(s)\big),{\phi}(s).
+$$
 
 * **Semi-gradient TD($n$)**
   Using $n$-step return $G_{t:t+n}=\sum_{k=1}^{n}\gamma^{k-1}r_{t+k}+\gamma^n \hat v(s_{t+n})$ (omit bootstrap past terminal),
-  $$
-  \mathbf{w}\leftarrow \mathbf{w} + \alpha,\big(G_{t:t+n}-\hat v(s_t)\big),l{\phi}(s_t).
-  $$
+
+$$
+\mathbf{w}\leftarrow \mathbf{w} + \alpha,\big(G_{t:t+n}-\hat v(s_t)\big),l{\phi}(s_t).
+$$
 
 ---
 
