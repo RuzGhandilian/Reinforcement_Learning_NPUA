@@ -174,6 +174,58 @@ This repository contains a series of projects developed as part of the Reinforce
 
 ---
 
+
+### Project 18: [Access-Control Scheduling (Queueing DP)](https://github.com/RuzGhandilian/Reinforcement_Learning_NPUA/tree/master/18_access_control)
+
+* Finite-horizon **dynamic programming** for an access-control problem with a fixed number of servers.
+* State is “free servers”; arriving jobs have **priority levels**. Action: **accept** or **reject**.
+* Computes **optimal policy** and visualizes **differential action values** vs. free servers per priority.
+
+📘 *Based on Chapter 10: Finite-Horizon DP / Control Examples*
+
+---
+
+### Project 19: [Mountain Car — $n$-step SARSA with Tile Coding](https://github.com/RuzGhandilian/Reinforcement_Learning_NPUA/tree/master/19_mountain_car)
+
+* Control with **$n$-step SARSA** ($n\in{1,2,4,8,16}$) using **tile-coded** $Q(s,a)$.
+* Learning-curve comparisons (steps/episode) vs. $\alpha$ and $n$; **cost-to-go** surface snapshots over training.
+* Shows that moderate $n$ and tiling-scaled step sizes give the fastest improvement.
+
+📘 *Based on Chapter 10: $n$-step Control with Function Approximation*
+
+---
+
+### Project 20: [Off-Policy TD in Baird’s Counterexample](https://github.com/RuzGhandilian/Reinforcement_Learning_NPUA/tree/master/20_counter_examples)
+
+* Reproduces **Baird’s counterexample**: **semi-gradient off-policy TD** diverges with linear FA.
+* Implements and compares **TDC / GTD2** (gradient-TD) and **Emphatic TD**.
+* Tracks weight trajectories, $\sqrt{\overline{\mathrm{VE}}}$, and **Projected Bellman Error**; shows **convergence** with Emphatic TD vs **divergence** for vanilla off-policy TD.
+
+📘 *Based on Chapter 11: Off-Policy Learning & Divergence; Gradient-TD and Emphatic methods*
+
+---
+
+### Project 21: [Eligibility Traces in Random Walk — TD($\lambda$) & $\lambda$-return](https://github.com/RuzGhandilian/Reinforcement_Learning_NPUA/tree/master/21_random_walk_et)
+
+* Compares **TD($\lambda$)** with **off-line** and **on-line $\lambda$-return** algorithms.
+* Sweeps **$\alpha$** and **$\lambda$**; reports **end-of-episode RMSE** over the first 10 episodes.
+* Finds broad optimality for **intermediate $\lambda$** (e.g., $0.8$) with method-specific stable $\alpha$ ranges.
+
+📘 *Based on Chapter 12: Eligibility Traces; Forward/Backward Views*
+
+---
+
+### Project 22: [Mountain Car — SARSA($\lambda$) with Eligibility Traces](https://github.com/RuzGhandilian/Reinforcement_Learning_NPUA/tree/master/22_mountain_car_et)
+
+* SARSA($\lambda$) with tile coding; compares **accumulating**, **replacing**, **replacing+clearing**, and **dutch** traces.
+* Sensitivity to $\alpha\times$tilings and $\lambda$; early-performance curves (steps/episode, return/episode).
+* **Dutch** and **replacing** traces perform best after tuning; very large $\lambda$ can be unstable at high $\alpha$.
+
+📘 *Based on Chapter 12: Traces in Control; Tile Coding in Mountain Car*
+
+---
+
+
 ## **Project Structure**
 
 Each project directory contains:
